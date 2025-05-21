@@ -54,7 +54,7 @@ python 0_generate_all_context.py <llm-provider> <benchmark> <num-to-generate> [o
 Supported `llm-provider` options:
 - [gpt](https://openai.com/api/)
 - [gemini](https://ai.google.dev/)
-- [claude](hhttps://www.anthropic.com/api)
+- [claude](https://www.anthropic.com/api)
 - [llama](https://www.llama.com/products/llama-api/)
 - [deepseek](https://api-docs.deepseek.com/)
 
@@ -73,7 +73,9 @@ Supported `benchmark` options:
 - `graph_{llm-provider}_{benchmark}.csv` (source code `3_generate_graph.py`): Generates graph relationships for each question in the specified benchamrk using the previously generated evidences
 - `graph_final_{llm-provider}_{benchmark}.csv` (source code `4_generate_graph_rankings.py`): Contains graph relationships with their relevance order based on LLM ranking, semantic ranking, and combined (LLM + semantic) ranking
 
-5. Optionally, run `5_generate_responses_no_context.py` to generate the responses for the small LLM without evidence/graph context, and run `6_generate_responses.py` to generate the responses with evidence and/or graph context. Change the model versions in `language_model.py` before running these scripts. Note that in our paper, we used [Harness](https://github.com/EleutherAI/lm-evaluation-harness) for response generation; this framework also provides evaluation. 
+5. Optionally, run `5_generate_responses_no_context.py` to generate the responses for the small LLM without evidence/graph context, and run `6_generate_responses.py` to generate the responses with evidence and/or graph context. Change the model versions in `language_model.py` before running these scripts. 
+
+    NOTE: In our paper, we used [Harness](https://github.com/EleutherAI/lm-evaluation-harness) for response generation; this framework also provides evaluation. 
 
 
 ## Contribution
