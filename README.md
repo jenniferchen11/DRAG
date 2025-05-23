@@ -1,4 +1,4 @@
-# llm-rag-retriever
+# DRAG
 
 Code for the paper "DRAG: Distilling RAG for SLMs from LLMs to Transfer Knowledge and Mitigate Hallucination via Evidence and Graph-based Distillation."
 
@@ -19,8 +19,8 @@ RAG methods have proven effective for tasks requiring factual consistency and ro
 ## Getting Started
 
 ```bash
-git clone https://github.com/jenniferchen11/drag-framework.git
-cd llm-rag-retriever
+git clone https://github.com/jenniferchen11/DRAG.git
+cd DRAG
 npm install
 ```
 
@@ -35,9 +35,9 @@ GEMINI_KEY='ghi'
 CLAUDE_KEY='jkl'
 ```
 
-2. Change the following settings in LLM versions in `language_model.py`:
-- The desired models for each LLM (modify the class definitions)
-- The MAX_RETRIES variable based on the maximum number of retries for calling APIs
+2. Change the following parameters in the `language_model.py` file:
+- The desired model names for each LLM (modify the class definitions)
+- The MAX_RETRIES variable based on the desired number of max retries for calling APIs
 
 3. Run the following command in the terminal to execute the graph and evidence generation pipeline:
 ```bash
